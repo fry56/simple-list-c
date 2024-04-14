@@ -34,3 +34,5 @@ list *list_new(void);
 list_node *list_get(list *list, size_t index);
 list_node *list_add(list *list, void *value);
 bool list_remove(list *list, list_node *node);
+void list_free(list *list);
+void list_clear(list *list);
