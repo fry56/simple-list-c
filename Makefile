@@ -10,6 +10,8 @@ SRC = \
 	src/list_new.c \
 	src/list_remove.c \
 	src/list_get.c \
+	src/list_free.c \
+	src/list_clear.c \
 
 OBJ = $(SRC:.c=.o)
 
