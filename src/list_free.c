@@ -11,7 +11,7 @@ void list_free(list_t *list)
 {
     if (list == NULL)
         return;
-    list_foreach(list, node)
+    for (list_node_t *node = list->head; node; node = node->next)
         free(node->value);
     list_clear(list);
     free(list);

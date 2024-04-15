@@ -24,8 +24,6 @@ typedef struct list_s {
     size_t length;
 } list_t;
 
-#define list_foreach(l, n) for (list_node_t *n = l->head; n; n = n->next)
-
 list_t *list_new(void);
 list_node_t *list_get(list_t *list, size_t index);
 list_node_t *list_add(list_t *list, void *value);

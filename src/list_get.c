@@ -13,7 +13,7 @@ list_node_t *list_get(list_t *list, size_t index)
 
     if (list == NULL)
         return NULL;
-    list_foreach(list, node) {
+    for (list_node_t *node = list->head; node; node = node->next) {
         if (index == i)
             return node;
         i++;
