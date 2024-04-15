@@ -7,7 +7,7 @@
 
 #include <list.h>
 
-bool list_remove(list *list, list_node *node)
+bool list_remove(list_t *list, list_node_t *node)
 {
     if (node->host != list)
         return false;

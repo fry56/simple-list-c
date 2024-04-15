@@ -7,12 +7,12 @@
 
 #include <list.h>
 
-void list_free(list *list)
+void list_free(list_t *list)
 {
     if (list == NULL)
         return;
     list_foreach(list, node)
-    free(node->value);
+        free(node->value);
     list_clear(list);
     free(list);
 }

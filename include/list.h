@@ -16,23 +16,19 @@ typedef struct list_node {
     void *value;
     struct list_node *next;
     struct list_node *prev;
-} list_node;
+} list_node_t;
 
 typedef struct list_s {
-    list_node *head;
-    list_node *tail;
+    list_node_t *head;
+    list_node_t *tail;
     size_t length;
-} list;
+} list_t;
 
-#define list_foreach(list, node) \
-            for (list_node *node = list->head; node; node = node->next)
+#define list_foreach(l, n) for (list_node_t *n = l->head; n; n = n->next)
 
-#define list_foreach_rev(list, node) \
-            for (list_node *node = list->tail; node; node = node->prev)
-
-list *list_new(void);
-list_node *list_get(list *list, size_t index);
-list_node *list_add(list *list, void *value);
-bool list_remove(list *list, list_node *node);
-void list_free(list *list);
-void list_clear(list *list);
+list_t *list_new(void);
+list_node_t *list_get(list_t *list, size_t index);
+list_node_t *list_add(list_t *list, void *value);
+bool list_remove(list_t *list, list_node_t *node);
+void list_free(list_t *list);
+void list_clear(list_t *list);

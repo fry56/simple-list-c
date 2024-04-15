@@ -7,9 +7,10 @@
 
 #include <list.h>
 
-void list_clear(list *list)
+void list_clear(list_t *list)
 {
-    list_node *node, *next;
+    list_node_t *node;
+    list_node_t *next;
 
     if (list == NULL)
         return;

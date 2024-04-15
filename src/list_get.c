@@ -7,7 +7,7 @@
 
 #include <list.h>
 
-list_node *list_get(list *list, size_t index)
+list_node_t *list_get(list_t *list, size_t index)
 {
     size_t i = 0;
 

@@ -7,7 +7,7 @@
 
 #include <list.h>
 
-static void list_add_node(list *list, list_node *node)
+static void list_add_node(list_t *list, list_node_t *node)
 {
     node->host = list;
     list->length++;
@@ -22,14 +22,13 @@ static void list_add_node(list *list, list_node *node)
     list->tail = node;
 }
 
-
-list_node *list_add(list *list, void *value)
+list_node_t *list_add(list_t *list, void *value)
 {
-    list_node *node;
+    list_node_t *node;
 
     if (list == NULL)
         return NULL;
-    node = calloc(1, sizeof(list_node));
+    node = calloc(1, sizeof(list_node_t));
     if (node == NULL)
         return NULL;
     node->value = value;

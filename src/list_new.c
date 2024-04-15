@@ -7,7 +7,7 @@
 
 #include <list.h>
 
-list *list_new(void)
+list_t *list_new(void)
 {
-    return calloc(1, sizeof(list));
+    return calloc(1, sizeof(list_t));
 }
