@@ -21,7 +21,7 @@ INCLUDE_FLAGS = \
 	-I include
 
 C_WARNING_FLAGS = -Wextra -Wall -g
-C_FLAGS = $(C_WARNING_FLAGS) $(INCLUDE_FLAGS)
+C_FLAGS = $(C_WARNING_FLAGS) $(INCLUDE_FLAGS) $(LIB_FLAGS)
 
 .c.o:
 	@echo "$(notdir $(CURDIR)): C '$<'"
